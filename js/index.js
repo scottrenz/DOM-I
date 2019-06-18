@@ -48,7 +48,7 @@ const myContainer = document.querySelector('.container');
 console.log(myContainer);
 const myCta = document.querySelector('.cta');
 console.log(myCta);
-const myCtaText = document.querySelector('.cta-text');
+let myCtaText = document.querySelector('.cta-text');
 console.log(myCtaText);
 const myMainContent = document.querySelector('.main-content');
 console.log(myMainContent);
@@ -115,8 +115,11 @@ console.log(myButton[0])
 
 const multiH4 = document.querySelectorAll('h4');
 console.log(multiH4);
-const multiH1 = document.querySelectorAll('h1');
-multiH1[0].textContent = siteContent.cta.h1;
+let multiH1 = document.querySelectorAll('h1');
+// multiH1[0].textContent = siteContent.cta.h1;
+// multiH1[0].style.display = 'flex';
+// multiH1[0].style.alignText = 'center';
+
 console.log(multiH1);
 multiH4[0].textContent = siteContent["main-content"]["features-h4"]
 multiH4[1].textContent = siteContent["main-content"]["about-h4"]
@@ -181,6 +184,24 @@ myA[0].style.color = 'dodgerBlue';
 myLogoImg.setAttribute('src', 'img/logo.png')
 myCtaImg.setAttribute('src', 'img/header-img.png')
 myMiddleImg.setAttribute('src', 'img/mid-page-accent.jpg')
+var h1 = document.createElement("h1");
+// myCtaText.prepend(h1)
+var d1 = document.querySelector('h1');
+d1.insertAdjacentHTML('afterend', '<h1>DOM</h1>');
+var d1 = document.querySelector('h1');
+d1.insertAdjacentHTML('afterend', '<h1>IS</h1>');
+
+multiH1 = document.querySelectorAll('h1');
+myCtaText = document.querySelector('.cta-text');
+
+// myCta2Text.prepend(h1)
+multiH1[0].textContent = 'DOM'
+multiH1[1].textContent = 'IS'
+multiH1[2].textContent = 'AWESOME'
+console.log(myCtaText)
+console.log(multiH1)
+
+
 
 // element.setAttribute('src', 'http://www.imagsource.com/image.jpg')
 
