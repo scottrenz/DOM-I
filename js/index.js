@@ -152,6 +152,10 @@ console.log(myNav)
 myA[0].textContent = 'Start'
 myA[0].href = '#'
 myA[0].style.color = 'dodgerBlue';
+myLogoImg.setAttribute('src', 'img/logo.png')
+myCtaImg.setAttribute('src', 'img/header-img.png')
+myMiddleImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
+// element.setAttribute('src', 'http://www.imagsource.com/image.jpg')
 
 // Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them 
