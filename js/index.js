@@ -184,20 +184,63 @@ myA[0].style.color = 'dodgerBlue';
 myLogoImg.setAttribute('src', 'img/logo.png')
 myCtaImg.setAttribute('src', 'img/header-img.png')
 myMiddleImg.setAttribute('src', 'img/mid-page-accent.jpg')
-var h1 = document.createElement("h1");
+// var h1 = document.createElement("h1");
 // myCtaText.prepend(h1)
-var d1 = document.querySelector('h1');
-d1.insertAdjacentHTML('afterend', '<h1>DOM</h1>');
-var d1 = document.querySelector('h1');
-d1.insertAdjacentHTML('afterend', '<h1>IS</h1>');
+// var d1 = document.querySelector('h1');
+// d1.insertAdjacentHTML('afterend', '<h1>DOM</h1>');
+// var d1 = document.querySelector('h1');
+// d1.insertAdjacentHTML('afterend', '<h1>IS</h1>');
 
-multiH1 = document.querySelectorAll('h1');
-myCtaText = document.querySelector('.cta-text');
+// multiH1 = document.querySelectorAll('h1');
+// myCtaText = document.querySelector('.cta-text');
 
 // myCta2Text.prepend(h1)
-multiH1[0].textContent = 'DOM'
-multiH1[1].textContent = 'IS'
-multiH1[2].textContent = 'AWESOME'
+// multiH1[0].textContent = 'DOM'
+// multiH1[1].textContent = 'IS'
+// multiH1[2].textContent = 'AWESOME'
+
+const string1 = siteContent.cta.h1;
+let arr1 = [];
+ arr1[0]='';
+let j = 0;
+for (i = 0; i < (string1.length ); i++) { //1
+  if (j === 2)
+    { arr1[j] = arr1[j] + string1[i]}
+  else
+    { if (string1[i] === ' ')//2
+         { j++//3
+           if(i === (string1.length - 1)){ i = string1.length}
+           else { arr1.push('') }
+         }//3
+      else
+         {arr1[j] = arr1[j] + string1[i]}
+    }//2  
+}//1
+
+if (arr1.length === 1)
+{multiH1[0].textContent = string1}
+else
+{ for (i = 0; i < arr1.length - 1; i++)
+{
+  multiH1 = document.querySelectorAll('h1');
+  myCtaText = document.querySelector('.cta-text');
+  var d1 = document.querySelector('h1');
+  d1.insertAdjacentHTML('afterend', '<h1>' + arr1[i] + '</h1>');
+  multiH1 = document.querySelectorAll('h1');
+  myCtaText = document.querySelector('.cta-text');
+  console.log('before=' , myCtaText)
+  console.log(arr1[i])
+
+  multiH1[i].textContent = arr1[i];  
+
+  console.log('after=' , myCtaText)
+  multiH1[i].style.marginBottom = '0px';
+}
+}
+multiH1[multiH1.length - 1].textContent = arr1[multiH1.length - 1];  
+
+console.log(arr1)
+console.log(arr1.length)
 console.log(myCtaText)
 console.log(multiH1)
 
