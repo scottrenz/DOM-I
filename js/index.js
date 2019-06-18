@@ -172,7 +172,8 @@ myA[myA.length-1].textContent = 'More'
 myA[myA.length-1].href = '#'
 myA[myA.length-1].style.color = 'red';
 
-myNav.prepend(a) //'<a href="#">More</a>')
+var a1 = document.createElement("a");
+myNav.prepend(a1) //'<a href="#">More</a>')
 
 myA = document.querySelectorAll('a');
 
@@ -184,6 +185,7 @@ myA[0].style.color = 'dodgerBlue';
 myLogoImg.setAttribute('src', 'img/logo.png')
 myCtaImg.setAttribute('src', 'img/header-img.png')
 myMiddleImg.setAttribute('src', 'img/mid-page-accent.jpg')
+
 // var h1 = document.createElement("h1");
 // myCtaText.prepend(h1)
 // var d1 = document.querySelector('h1');
