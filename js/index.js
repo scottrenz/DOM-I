@@ -87,33 +87,43 @@ myCtaText.textContent = siteContent.cta.h1;
 console.log(myCtaText)
 myButton.textContent = siteContent.cta.button;
 console.log(myButton)
-myMainContent.childNodes[0].textContent = siteContent["main-content"]["features-h4"]
-myMainContent.childNodes[2].textContent = siteContent["main-content"]["features-content"]
-myMainContent.childNodes[4].textContent = siteContent["main-content"]["about-h4"]
-myMainContent.childNodes[6].textContent = siteContent["main-content"]["about-content"]
-console.log(myMainContent.childNodes[0])
-console.log(myMainContent.childNodes[2])
-console.log(myMainContent.childNodes[4])
-console.log(myMainContent.childNodes[6])
-console.log(myMainContent.childNodes)
-myBottomContent.childNodes[0].textContent = siteContent["main-content"]["services-h4"]
-myBottomContent.childNodes[2].textContent = siteContent["main-content"]["services-content"]
-myBottomContent.childNodes[4].textContent = siteContent["main-content"]["product-h4"]
-myBottomContent.childNodes[6].textContent = siteContent["main-content"]["product-content"]
-console.log(myBottomContent.childNodes[0])
-console.log(myBottomContent.childNodes[2])
-console.log(myBottomContent.childNodes[4])
-console.log(myBottomContent.childNodes[6])
-console.log(myBottomContent.childNodes)
+// myMainContent.childNodes[0].textContent = siteContent["main-content"]["features-h4"]
+// myMainContent.childNodes[2].textContent = siteContent["main-content"]["features-content"]
+// myMainContent.childNodes[4].textContent = siteContent["main-content"]["about-h4"]
+// myMainContent.childNodes[6].textContent = siteContent["main-content"]["about-content"]
+// console.log(myMainContent.childNodes[0])
+// console.log(myMainContent.childNodes[2])
+// console.log(myMainContent.childNodes[4])
+// console.log(myMainContent.childNodes[6])
+// console.log(myMainContent.childNodes)
+// myBottomContent.childNodes[0].textContent = siteContent["main-content"]["services-h4"]
+// myBottomContent.childNodes[2].textContent = siteContent["main-content"]["services-content"]
+// myBottomContent.childNodes[4].textContent = siteContent["main-content"]["product-h4"]
+// myBottomContent.childNodes[6].textContent = siteContent["main-content"]["product-content"]
+// console.log(myBottomContent.childNodes[0])
+// console.log(myBottomContent.childNodes[2])
+// console.log(myBottomContent.childNodes[4])
+// console.log(myBottomContent.childNodes[6])
+// console.log(myBottomContent.childNodes)
 
 const multiH4 = document.querySelectorAll('h4');
 console.log(multiH4);
+
+multiH4[0].textContent = siteContent["main-content"]["features-h4"]
+multiH4[1].textContent = siteContent["main-content"]["about-h4"]
+multiH4[2].textContent = siteContent["main-content"]["services-h4"]
+multiH4[3].textContent = siteContent["main-content"]["product-h4"]
+
 
 multiH4[4].textContent = siteContent["main-content"]["vision-h4"]
 multiH4[5].textContent = siteContent["contact"]["contact-h4"]
 
 const multiP = document.querySelectorAll('p');
 console.log(multiP);
+multiP[0].textContent = siteContent["main-content"]["features-content"]
+multiP[1].textContent = siteContent["main-content"]["about-content"]
+multiP[2].textContent = siteContent["main-content"]["services-content"]
+multiP[3].textContent = siteContent["main-content"]["product-content"]
 
 multiP[4].textContent = siteContent["main-content"]["vision-content"]
 multiP[5].textContent = siteContent["contact"]["address"]
