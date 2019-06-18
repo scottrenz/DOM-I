@@ -65,7 +65,7 @@ const myBottomContent = document.querySelector('.bottom-content');
 console.log(myBottomContent);
 const myContact = document.querySelector('.contact');
 console.log(myContact);
-const myA = document.querySelectorAll('a');
+let myA = document.querySelectorAll('a');
 console.log(myA);
 const myNav = document.querySelector('nav');
 console.log(myNav);
@@ -128,3 +128,30 @@ console.log(multiP[6])
 console.log(multiP[7])
 
 console.log(multiP[8])
+
+console.log(myA)
+console.log(myNav)
+
+var a = document.createElement("a");
+myNav.appendChild(a) //'<a href="#">More</a>')
+
+myA = document.querySelectorAll('a');
+
+console.log(myA)
+console.log(myNav)
+myA[myA.length-1].textContent = 'More'
+myA[myA.length-1].href = '#'
+myA[myA.length-1].style.color = 'red';
+
+myNav.prepend(a) //'<a href="#">More</a>')
+
+myA = document.querySelectorAll('a');
+
+console.log(myA)
+console.log(myNav)
+myA[0].textContent = 'Start'
+myA[0].href = '#'
+myA[0].style.color = 'dodgerBlue';
+
+
+// Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them 
