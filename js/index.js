@@ -71,8 +71,8 @@ const myNav = document.querySelector('nav');
 console.log(myNav);
 const myFooter = document.querySelector('footer');
 console.log(myFooter);
-const myButton = document.querySelector('button');
-
+const myButton = document.querySelectorAll('button');
+console.log(myButton)
 console.log(siteContent);
 console.log(siteContent.nav);
 console.log(siteContent.nav['nav-item-1']);
@@ -83,10 +83,17 @@ for (let i = 0; i < myA.length; i++) {
   myA[i].style.color = 'green';
   console.log('mynav ', myA[i].textContent );
 }
-myCtaText.textContent = siteContent.cta.h1;
+// myCtaText.textContent = siteContent.cta.h1;
 console.log(myCtaText)
-myButton.textContent = siteContent.cta.button;
+myButton[0].textContent = siteContent.cta.button;
 console.log(myButton)
+console.log(myButton[0])
+
+// myButton[0].style.color = 'black';
+// myButton[0].style.visibility = 'visible';
+// myButton[0].style.display = 'flex';
+// myButton[0].style.position = 'absolute';
+
 // myMainContent.childNodes[0].textContent = siteContent["main-content"]["features-h4"]
 // myMainContent.childNodes[2].textContent = siteContent["main-content"]["features-content"]
 // myMainContent.childNodes[4].textContent = siteContent["main-content"]["about-h4"]
@@ -108,7 +115,9 @@ console.log(myButton)
 
 const multiH4 = document.querySelectorAll('h4');
 console.log(multiH4);
-
+const multiH1 = document.querySelectorAll('h1');
+multiH1[0].textContent = siteContent.cta.h1;
+console.log(multiH1);
 multiH4[0].textContent = siteContent["main-content"]["features-h4"]
 multiH4[1].textContent = siteContent["main-content"]["about-h4"]
 multiH4[2].textContent = siteContent["main-content"]["services-h4"]
@@ -148,6 +157,13 @@ myNav.appendChild(a) //'<a href="#">More</a>')
 myA = document.querySelectorAll('a');
 
 console.log(myA)
+
+myButton.textContent = siteContent.cta.button;
+
+
+console.log(myCtaText)
+
+
 console.log(myNav)
 myA[myA.length-1].textContent = 'More'
 myA[myA.length-1].href = '#'
