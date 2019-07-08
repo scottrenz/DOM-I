@@ -43,4 +43,55 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navDOM = document.querySelectorAll('nav a')
 let navArr = Object.values(siteContent.nav)
 for (i=0; i<(navDOM.length); i++)
-{navDOM[i].textContent = navArr[i]}
+{
+  navDOM[i].textContent = navArr[i]
+  navDOM[i].style.color = 'green'
+}
+aItem = document.createElement('a')
+
+
+
+navDOM[navDOM.length-1].appendChild(aItem)
+navDOM[navDOM.length-1].textContent='Last'
+navDOM[0].prepend(aItem)
+navDOM[0].textContent='First'
+
+let ctaH1 = document.querySelector('.cta .cta-text h1')
+ctaH1.textContent = siteContent.cta.h1
+let ctaButton = document.querySelector('.cta .cta-text button')
+ctaButton.textContent = siteContent.cta.button
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+let mainArr = Object.values(siteContent['main-content'])
+let topH41 = document.querySelector('.main-content .top-content .text-content h4')
+let topH42 = document.querySelector('.main-content .top-content .text-content:nth-of-type(2) h4')
+topH41.textContent = mainArr[0]
+topH42.textContent = mainArr[2]
+let topP1 = document.querySelector('.main-content .top-content .text-content p')
+let topP2 = document.querySelector('.main-content .top-content .text-content:nth-of-type(2) p')
+topP1.textContent = mainArr[1]
+topP2.textContent = mainArr[3]
+let midImage = document.getElementById("middle-img");
+midImage.setAttribute('src', mainArr[4])
+let bottomH41 = document.querySelector('.main-content .bottom-content .text-content h4')
+let bottomH42 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(2) h4')
+let bottomH43 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(3) h4')
+bottomH41.textContent = mainArr[5]
+bottomH42.textContent = mainArr[7]
+bottomH43.textContent = mainArr[9]
+let bottomP1 = document.querySelector('.main-content .bottom-content .text-content p')
+let bottomP2 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(2) p')
+let bottomP3 = document.querySelector('.main-content .bottom-content .text-content:nth-of-type(3) p')
+bottomP1.textContent = mainArr[6]
+bottomP2.textContent = mainArr[8]
+bottomP3.textContent = mainArr[10]
+let contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent.contact['contact-h4']
+let contactP1 = document.querySelector('.contact p')
+let contactP2 = document.querySelector('.contact p:nth-of-type(2)')
+let contactP3 = document.querySelector('.contact p:nth-of-type(3)')
+contactP1.textContent =  siteContent.contact.address
+contactP2.textContent =  siteContent.contact.phone
+contactP3.textContent =  siteContent.contact.email
+let footerP = document.querySelector('footer p')
+footerP.textContent = siteContent.footer.copyright
