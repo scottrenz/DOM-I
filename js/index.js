@@ -69,6 +69,7 @@ ctaT = document.querySelector('.cta .cta-text')
 
 let ctaButton = document.querySelector('.cta .cta-text button')
 ctaButton.textContent = siteContent.cta.button
+ctaButton.style.color = 'red'
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 let mainArr = Object.values(siteContent['main-content'])
