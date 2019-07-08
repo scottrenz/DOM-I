@@ -48,9 +48,6 @@ for (i=0; i<(navDOM.length); i++)
   navDOM[i].style.color = 'green'
 }
 aItem = document.createElement('a')
-
-
-
 navDOM[navDOM.length-1].appendChild(aItem)
 navDOM[navDOM.length-1].textContent='Last'
 navDOM[0].prepend(aItem)
