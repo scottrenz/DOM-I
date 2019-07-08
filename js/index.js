@@ -53,8 +53,20 @@ navDOM[navDOM.length-1].textContent='Last'
 navDOM[0].prepend(aItem)
 navDOM[0].textContent='First'
 
+let ctaT = document.querySelector('.cta .cta-text')
 let ctaH1 = document.querySelector('.cta .cta-text h1')
-ctaH1.textContent = siteContent.cta.h1
+ctaH1.textContent = 'Awesome'
+hItem = document.createElement('h1')
+ctaT.prepend(hItem)
+ctaH1 = document.querySelector('.cta .cta-text h1')
+ctaH1.textContent = 'IS'
+let ctaHHH = document.querySelectorAll('.cta .cta-text h1')
+hhItem = document.createElement('h1')
+ctaHHH[0].prepend(hhItem)
+ctaH1H1 = document.querySelector('.cta .cta-text h1 h1')
+ctaH1H1.textContent = 'DOM'
+ctaT = document.querySelector('.cta .cta-text')
+
 let ctaButton = document.querySelector('.cta .cta-text button')
 ctaButton.textContent = siteContent.cta.button
 let ctaImage = document.getElementById("cta-img");
