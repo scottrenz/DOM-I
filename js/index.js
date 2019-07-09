@@ -53,18 +53,33 @@ navDOM[navDOM.length-1].textContent='Last'
 navDOM[0].prepend(aItem)
 navDOM[0].textContent='First'
 
+let ddd = siteContent.cta.h1.replace(' ',',')
+ddd = ddd.replace(' ',',')
+let dArr = []
+for (i=0, x=''; i<ddd.length; i++)
+if (ddd[i] === ',')
+{
+dArr.push(x)
+x=''
+}
+else
+{
+x = x + ddd[i]
+if (i === ddd.length - 1)
+dArr.push(x)
+}
 let ctaT = document.querySelector('.cta .cta-text')
 let ctaH1 = document.querySelector('.cta .cta-text h1')
-ctaH1.textContent = 'Awesome'
+ctaH1.textContent = dArr[2]
 hItem = document.createElement('h1')
 ctaT.prepend(hItem)
 ctaH1 = document.querySelector('.cta .cta-text h1')
-ctaH1.textContent = 'IS'
+ctaH1.textContent = dArr[1]
 let ctaHHH = document.querySelectorAll('.cta .cta-text h1')
 hhItem = document.createElement('h1')
 ctaHHH[0].prepend(hhItem)
 ctaH1H1 = document.querySelector('.cta .cta-text h1 h1')
-ctaH1H1.textContent = 'DOM'
+ctaH1H1.textContent = dArr[0]
 ctaT = document.querySelector('.cta .cta-text')
 
 let ctaButton = document.querySelector('.cta .cta-text button')
@@ -105,3 +120,4 @@ contactP2.textContent =  siteContent.contact.phone
 contactP3.textContent =  siteContent.contact.email
 let footerP = document.querySelector('footer p')
 footerP.textContent = siteContent.footer.copyright
+contactP1.style = 'width: 150px;'
